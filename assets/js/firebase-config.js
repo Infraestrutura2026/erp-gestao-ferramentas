@@ -11,13 +11,23 @@
  * Para repositórios públicos, use variáveis de ambiente.
  */
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY_AQUI",
-  authDomain: "SEU_PROJETO.firebaseapp.com",
-  projectId: "SEU_PROJETO_ID",
-  storageBucket: "SEU_PROJETO.appspot.com",
-  messagingSenderId: "SEU_MESSAGING_SENDER_ID",
-  appId: "SEU_APP_ID"
+  apiKey: "AIzaSyA-JN8TLCAo1slWd_VLxIeDnKT_AK1-lxA",
+  authDomain: "erp-gestao-ferramentas.firebaseapp.com",
+  projectId: "erp-gestao-ferramentas",
+  storageBucket: "erp-gestao-ferramentas.firebasestorage.app",
+  messagingSenderId: "1082813829556",
+  appId: "1:1082813829556:web:aa9f2741885a89646ee2e1"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 };
 
 // Para produção com variáveis de ambiente (ex: Netlify/Vercel):
