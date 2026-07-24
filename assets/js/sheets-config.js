@@ -13,7 +13,7 @@
  */
 const CONFIG = {
   // Substitua pela URL do seu Web App do Apps Script
-  APP_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzPT7iakvp-j-3Gm8NwpZAV70BpgSWfXUI2vjINhoXFA2xBpEcHQT677lj07VNH7s2Vdg/exec',
+  APP_SCRIPT_URL: 'https://script.google.com/macros/s/SEU_ID_AQUI/exec',
 
   // Nomes das abas na planilha (devem corresponder exatamente)
   SHEETS: {
@@ -26,7 +26,7 @@ const CONFIG = {
   // Login simples (sem Firebase). Altere conforme necessário.
   USERS: [
     { username: 'admin', password: 'admin2026', name: 'Administrador' },
-    { username: 'osvaldo', password: 'infra2026', name: 'Infraestrutura' },
-    { username: 'zanoni', password: 'infra2026', name: 'Logística' }
+    { username: 'infra', password: 'infra2026', name: 'Infraestrutura' },
+    { username: 'logistica', password: 'log2026', name: 'Logística' }
   ]
 };
