@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Tools - Gestão de Ferramentas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<div class="flex h-screen overflow-hidden">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white border-r border-slate-200 flex flex-col z-10 sidebar">
+    <div class="p-5 border-b border-slate-200">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">🔧</div>
+        <div>
+          <h1 class="font-bold text-slate-800 leading-tight">ERP Tools</h1>
+          <p class="text-xs text-slate-500">Gestão de Ferramentas</p>
+        </div>
+      </div>
+      <div id="connectionStatus" class="mt-3 flex items-center gap-2 text-xs px-2 py-1 rounded-full badge-offline w-fit">
+        <span class="w-2 h-2 rounded-full bg-current"></span>
+        <span id="connectionText">Desconectado</span>
+      </div>
+    </div>
+    <nav class="flex-1 py-4">
+      <a href="#" onclick="app.navigate('dashboard')" class="nav-item active flex items-center gap-3 px-5 py-3 text-sm font-medium text-slate-600" data-page="dashboard">
+        <i class="fas fa-chart-line w-5"></i> Dashboard
+      </a>
+      <a href="#" onclick="app.navigate('emprestimos')" class="nav-item flex items-center gap-3 px-5 py-3 text-sm font-medium text-slate-600" data-page="emprestimos">
+        <i class="fas fa-hand-holding w-5"></i> Empréstimos
+      </a>
+      <a href="#" onclick="app.navigate('estoque')" class="nav-item flex items-center gap-3 px-5 py-3 text-sm font-medium text-slate-600" data-page="estoque">
+        <i class="fas fa-boxes w-5"></i> Estoque
+      </a>
+      <a href="#" onclick="app.navigate('ferramentas')" class="nav-item flex items-center gap-3 px-5 py-3 text-sm font-medium text-slate-600" data-page="ferramentas">
+        <i class="fas fa-tools w-5"></i> Ferramentas
+      </a>
+      <a href="#" onclick="app.navigate('historico')" class="nav-item flex items-center gap-3 px-5 py-3 text-sm font-medium text-slate-600" data-page="historico">
+        <i class="fas fa-history w-5"></i> Histórico
+      </a>
+    </nav>
+    <div class="p-4 border-t border-slate-200">
+      <div class="bg-slate-50 rounded-lg p-3 text-xs text-slate-500">
+        <p class="font-semibold text-slate-700 mb-1">💡 Dica</p>
+        <p>Configure o Firebase em <code>assets/js/firebase-config.js</code></p>
+      </div>
+      <div class="mt-3 text-xs text-slate-400 text-center">
+        <p>v2.0.0 | <a href="https://github.com/seu-usuario/erp-gestao-ferramentas" target="_blank" class="hover:text-blue-600"><i class="fab fa-github"></i> GitHub</a></p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="flex-1 flex flex-col overflow-hidden relative">
+    <!-- Topbar -->
+    <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-6">
+      <div class="flex items-center gap-4">
+        <h2 id="pageTitle" class="text-lg font-semibold text-slate-800">Dashboard</h2>
+        <span id="syncBadge" class="hidden items-center gap-1 text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
+          <span class="spinner w-3 h-3 border-2"></span> Sincronizando...
+        </span>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="app.exportData()" class="px-3 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg transition">
+          <i class="fas fa-download mr-1"></i> Exportar
+        </button>
+        <button onclick="app.importData()" class="px-3 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg transition">
+          <i class="fas fa-upload mr-1"></i> Importar
+        </button>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div id="content" class="flex-1 overflow-y-auto p-6">
+      <!-- Pages injected here -->
+    </div>
+  </main>
+</div>
+
+<!-- Generic Modal -->
+<div id="genericModal" class="modal">
+  <div class="bg-white rounded-xl shadow-xl w-full max-w-lg m-4 max-h-[90vh] overflow-y-auto">
+    <div class="p-5 border-b border-slate-200 flex justify-between items-center">
+      <h3 id="modalTitle" class="font-semibold text-lg">Título</h3>
+      <button onclick="app.closeModal()" class="text-slate-400 hover:text-slate-600"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="modalBody" class="p-5"></div>
+    <div class="p-5 border-t border-slate-200 flex justify-end gap-2">
+      <button onclick="app.closeModal()" class="px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Cancelar</button>
+      <button id="modalSaveBtn" class="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Import Modal -->
+<div id="importModal" class="modal">
+  <div class="bg-white rounded-xl shadow-xl w-full max-w-lg m-4">
+    <div class="p-5 border-b border-slate-200 flex justify-between items-center">
+      <h3 class="font-semibold text-lg">Importar Dados</h3>
+      <button onclick="document.getElementById('importModal').classList.remove('open')" class="text-slate-400 hover:text-slate-600"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="p-5">
+      <p class="text-sm text-slate-600 mb-3">Cole aqui o JSON exportado anteriormente ou os dados iniciais:</p>
+      <textarea id="importArea" class="w-full h-40 border border-slate-300 rounded-lg p-3 text-sm font-mono" placeholder='{"emprestimos":[], ...}'></textarea>
+    </div>
+    <div class="p-5 border-t border-slate-200 flex justify-end gap-2">
+      <button onclick="document.getElementById('importModal').classList.remove('open')" class="px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-lg">Cancelar</button>
+      <button onclick="app.confirmImport()" class="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700">Importar</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/firebase-config.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/modules/dashboard.js"></script>
+<script src="assets/js/modules/emprestimos.js"></script>
+<script src="assets/js/modules/estoque.js"></script>
+<script src="assets/js/modules/ferramentas.js"></script>
+<script src="assets/js/modules/historico.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
