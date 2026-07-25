@@ -1,7 +1,0 @@
-id,ferramenta,tipo,data,responsavel,observacao,createdAt,updatedAt
-8db102aa-3aa9-4295-9,Engraxadeira,Manutenção,2026-07-24,Infraestrutura,Item em manutenção - verificar situação,2026-07-24,2026-07-24
-9a5ac244-df82-4803-a,Lixadeira,Manutenção,2026-07-24,Infraestrutura,Trocar rolamento,2026-07-24,2026-07-24
-0fd46824-a1bf-4fbf-9,Alicate de trava,Manutenção,2026-07-24,Infraestrutura,Situação ruim - avaliar reposição,2026-07-24,2026-07-24
-2f008af4-f507-42a4-a,Multímetro,Manutenção,2026-07-24,Infraestrutura,3 unidades danificadas - enviar para calibração/reparo,2026-07-24,2026-07-24
-3618ffa2-6f77-470d-9,Espátula de borracharia,Manutenção,2026-07-24,Infraestrutura,Com avaria - necessita reposição de 4 unidades,2026-07-24,2026-07-24
-7b2ff696-061b-4b59-b,Nível de mão (armário),Manutenção,2026-07-24,Infraestrutura,1 unidade danificada,2026-07-24,2026-07-24
