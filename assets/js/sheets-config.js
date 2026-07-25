@@ -26,7 +26,7 @@ const CONFIG = {
   // Login simples (sem Firebase). Altere conforme necessário.
   USERS: [
     { username: 'admin', password: 'admin2026', name: 'Administrador' },
-    { username: 'infra', password: 'infra2026', name: 'Infraestrutura' },
-    { username: 'logistica', password: 'log2026', name: 'Logística' }
+    { username: 'osvaldo', password: 'infra2026', name: 'Osvaldo Martinez' },
+    { username: 'zanoni', password: 'infra026', name: 'Danilo Zanoni' }
   ]
 };
