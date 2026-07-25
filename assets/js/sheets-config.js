@@ -27,6 +27,6 @@ const CONFIG = {
   USERS: [
     { username: 'admin', password: 'admin2026', name: 'Administrador' },
     { username: 'osvaldo', password: 'infra2026', name: 'Osvaldo Martinez' },
-    { username: 'zanoni', password: 'infra026', name: 'Danilo Zanoni' }
+    { username: 'zanoni', password: 'infra2026', name: 'Danilo Zanoni' }
   ]
 };
