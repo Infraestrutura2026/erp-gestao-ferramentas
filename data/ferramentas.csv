@@ -1,0 +1,65 @@
+id,nome,codigo,categoria,descricao,disponivel,createdAt,updatedAt
+a42d443d-df0c-4919-a,Caixa de jogo de pito Grande,F001,Mecânica,Jogo de pito grande,Sim,2026-07-24,2026-07-24
+166cc262-ffb9-4e4a-b,Caixa de jogo de pito Média,F002,Mecânica,Jogo de pito médio,Sim,2026-07-24,2026-07-24
+27b5f093-b5d7-4697-a,Jogo de pito Torque,F003,Mecânica,Jogo de pito torque,Sim,2026-07-24,2026-07-24
+12cdb1db-8046-43d4-b,Grampo,F004,Mecânica,Grampo universal,Sim,2026-07-24,2026-07-24
+cc786f42-9692-4945-a,Saca polia,F005,Mecânica,Saca polia,Sim,2026-07-24,2026-07-24
+4a305573-a0b8-428a-b,Chave de fenda,F006,Mecânica,Chave de fenda diversos tamanhos,Sim,2026-07-24,2026-07-24
+b0937780-2403-48b2-9,Chave Philips,F007,Mecânica,Chave Philips,Sim,2026-07-24,2026-07-24
+5800b234-6edd-40ab-8,Alicate de pressão,F008,Mecânica,Alicate de pressão,Sim,2026-07-24,2026-07-24
+bf4f9d14-f966-4cee-a,Alicate universal,F009,Mecânica,Alicate universal,Sim,2026-07-24,2026-07-24
+b2e44318-1630-4a44-b,Alicate de bico,F010,Mecânica,Alicate de bico,Sim,2026-07-24,2026-07-24
+fd5916c3-7d81-4c15-8,Alicate de corte,F011,Mecânica,Alicate de corte,Sim,2026-07-24,2026-07-24
+7d483cf5-f106-4cad-9,Alicate de trava,F012,Mecânica,Alicate de trava,Não,2026-07-24,2026-07-24
+665c4cb0-4f4a-4aec-9,Chave combinada,F013,Mecânica,Chave combinada,Sim,2026-07-24,2026-07-24
+fcfd4490-b994-41d4-9,Marreta,F014,Mecânica,Marreta,Sim,2026-07-24,2026-07-24
+60214603-c502-4757-9,Chave inglesa,F015,Mecânica,Chave inglesa,Sim,2026-07-24,2026-07-24
+6f057c81-bcc8-4ece-8,Chave de boca,F016,Mecânica,Chave de boca,Sim,2026-07-24,2026-07-24
+98caa8b8-9f8f-4b11-8,Chave fixa,F017,Mecânica,Chave fixa,Sim,2026-07-24,2026-07-24
+152df81b-71a8-4513-8,Chave de L,F018,Mecânica,Chave de L,Sim,2026-07-24,2026-07-24
+3b0dbe47-5c35-4b97-a,Rebitadeira,F019,Mecânica,Rebitadeira manual,Sim,2026-07-24,2026-07-24
+53fc67ce-cfd0-49d5-a,Chave Allen,F020,Mecânica,Jogo de chave allen,Sim,2026-07-24,2026-07-24
+54850f6c-8b4d-4ebf-a,Chave torque,F021,Mecânica,Chave torque,Sim,2026-07-24,2026-07-24
+df45ea93-77c7-457e-a,Furadeira,F022,Elétrica,Furadeira elétrica,Sim,2026-07-24,2026-07-24
+777b6231-da5d-4ef3-a,Lixadeira,F023,Elétrica,Lixadeira elétrica,Sim,2026-07-24,2026-07-24
+366e1453-259f-410e-8,Martelete,F024,Elétrica,Martelete,Sim,2026-07-24,2026-07-24
+dd859382-7191-4af5-8,Máquina de Solda,F025,Elétrica,Máquina de solda,Sim,2026-07-24,2026-07-24
+724b6c15-8035-4ada-b,Máscara de Solda,F026,Elétrica,Máscara de solda,Sim,2026-07-24,2026-07-24
+bec82347-310f-4595-8,Torquímetro,F027,Medição,Torquímetro,Sim,2026-07-24,2026-07-24
+1831ccc6-1bf2-40e5-9,Serrote de serra ferro,F028,Mecânica,Serrote de serra ferro,Sim,2026-07-24,2026-07-24
+a61be5f2-d385-4c3a-8,Ferro de Solda,F029,Elétrica,Ferro de solda,Sim,2026-07-24,2026-07-24
+c4449cc8-2588-4eb7-9,Serrote,F030,Mecânica,Serrote,Sim,2026-07-24,2026-07-24
+fe9a9236-83ba-4985-8,Nível de mão,F031,Medição,Nível de mão,Sim,2026-07-24,2026-07-24
+ff86e6bd-7f30-4837-9,Engraxadeira,F032,Mecânica,Engraxadeira,Não,2026-07-24,2026-07-24
+8803f8f9-3998-48d4-8,Martelo,F033,Mecânica,Martelo,Sim,2026-07-24,2026-07-24
+19ded21b-50bc-4dd6-b,Pistola de óleo,F034,Mecânica,Pistola de óleo,Sim,2026-07-24,2026-07-24
+65044bca-65d8-49de-8,Cabo auxiliar,F035,Elétrica,Cabo auxiliar (chupeta),Sim,2026-07-24,2026-07-24
+f50bf483-ba1c-47ef-a,Multímetro,F036,Medição,Multímetro digital,Não,2026-07-24,2026-07-24
+375c9f62-f89c-46d9-9,Pé de cabra,F037,Mecânica,Pé de cabra,Sim,2026-07-24,2026-07-24
+9eda6576-e847-4aa0-8,Chave de roda,F038,Mecânica,Chave de roda,Sim,2026-07-24,2026-07-24
+c63c39e4-e3da-49f7-b,Toca filtro,F039,Mecânica,Toca filtro / Saca filtro,Sim,2026-07-24,2026-07-24
+1f092c7f-06a2-4ea9-8,Espátula de borracharia,F040,Mecânica,Espátula de borracharia,Não,2026-07-24,2026-07-24
+7ff6428d-44d2-44ef-9,Bica,F041,Mecânica,Bica,Sim,2026-07-24,2026-07-24
+bca023ac-183a-4238-b,Compressor,F042,Pneumática,Compressor de ar,Sim,2026-07-24,2026-07-24
+bfd856ff-6981-486f-a,Lavadora de alta pressão,F043,Hidráulica,Lavadora de alta pressão,Sim,2026-07-24,2026-07-24
+7f6814f0-829f-496e-a,Carregador de bateria,F044,Elétrica,Carregador de bateria,Sim,2026-07-24,2026-07-24
+8f6f7508-6680-4d5c-8,Garrafa,F045,Hidráulica,Garrafa hidráulica,Sim,2026-07-24,2026-07-24
+59a1f914-3ef5-4760-a,Prensa,F046,Mecânica,Prensa,Sim,2026-07-24,2026-07-24
+52fa3da1-6705-4504-a,Carrinho,F047,Logística,Carrinho de transporte,Sim,2026-07-24,2026-07-24
+799ab97e-0761-4cb6-a,Calibrador,F048,Medição,Calibrador de pneus,Sim,2026-07-24,2026-07-24
+a7bc2fea-e6fa-4f5c-b,Tico Tico,F049,Elétrica,Serra tico-tico,Sim,2026-07-24,2026-07-24
+90247962-e9d9-4588-a,Serra circular,F050,Elétrica,Serra circular,Sim,2026-07-24,2026-07-24
+523348bd-48c5-40ae-9,Máscara de Solda Digital,F051,Elétrica,Máscara de solda digital,Sim,2026-07-24,2026-07-24
+e62dd152-73ab-4b74-8,Batidor de massa,F052,Mecânica,Batidor de massa,Sim,2026-07-24,2026-07-24
+de0a7f53-9935-49b1-8,Aplicador de silicone,F053,Mecânica,Aplicador de silicone,Sim,2026-07-24,2026-07-24
+d5216a9a-322b-4ef5-9,Colher de pedreiro,F054,Mecânica,Colher de pedreiro,Sim,2026-07-24,2026-07-24
+933fbd13-8bf5-47e2-a,Desempenadeira,F055,Mecânica,Desempenadeira,Sim,2026-07-24,2026-07-24
+b94ec969-c46d-465f-8,Extensão elétrica,F056,Elétrica,Extensão elétrica,Sim,2026-07-24,2026-07-24
+206dbd45-0f34-4050-b,Cinto de segurança,F057,Segurança,Cinto de segurança,Sim,2026-07-24,2026-07-24
+ad54903d-5e09-41fc-b,Maquita,F058,Elétrica,Maquita / Serra mármore,Sim,2026-07-24,2026-07-24
+2d191b0d-126a-4c50-9,Lixadeira grande,F059,Elétrica,Lixadeira grande,Sim,2026-07-24,2026-07-24
+45b9c362-9083-48b3-a,Trena,F060,Medição,Trena,Sim,2026-07-24,2026-07-24
+b6027334-afef-473f-b,Alicate,F061,Mecânica,Alicate,Sim,2026-07-24,2026-07-24
+4c638e0f-b98b-4fa6-8,Torquesa,F062,Mecânica,Torquesa,Sim,2026-07-24,2026-07-24
+95ba4ec3-1fdd-4091-a,Lixadeira (armário),F063,Elétrica,Lixadeira do armário fechado,Sim,2026-07-24,2026-07-24
+ab8654c9-b930-4657-b,Ponteira,F064,Mecânica,Ponteira,Sim,2026-07-24,2026-07-24
