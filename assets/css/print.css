@@ -1,0 +1,97 @@
+/* ========================================
+   Estilos para Impressão de Relatórios
+   ======================================== */
+
+@media print {
+  /* Esconde elementos da UI */
+  .sidebar,
+  .print\:hidden,
+  nav,
+  button:not(.print-btn),
+  select,
+  input[type="search"],
+  .toast,
+  #loginScreen,
+  header nav {
+    display: none !important;
+  }
+
+  /* Expande o conteúdo */
+  .main-content,
+  #appContent,
+  #contentArea {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Remove sombras e bordas desnecessárias */
+  .shadow,
+  .rounded-lg {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* Força fundo branco */
+  body,
+  .bg-slate-50,
+  .bg-slate-100 {
+    background: white !important;
+  }
+
+  /* Garante que tabelas quebrem página corretamente */
+  table {
+    page-break-inside: auto;
+    width: 100% !important;
+    font-size: 11pt !important;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  /* Mostra elementos escondidos do relatório */
+  .print\:block {
+    display: block !important;
+  }
+
+  /* Ajusta cores para impressão */
+  .text-green-600 {
+    color: #16a34a !important;
+  }
+  .text-red-600 {
+    color: #dc2626 !important;
+  }
+  .text-amber-600 {
+    color: #d97706 !important;
+  }
+  .bg-red-50 {
+    background-color: #fef2f2 !important;
+  }
+  .bg-green-100 {
+    background-color: #dcfce7 !important;
+  }
+  .bg-amber-100 {
+    background-color: #fef3c7 !important;
+  }
+  .bg-red-100 {
+    background-color: #fee2e2 !important;
+  }
+
+  /* Quebra de página antes do relatório */
+  #relatorioConteudo {
+    page-break-before: auto;
+  }
+
+  /* Remove padding excessivo */
+  .p-4,
+  .p-6 {
+    padding: 8px !important;
+  }
+}
