@@ -13,7 +13,7 @@
  */
 const CONFIG = {
   // Substitua pela URL do seu Web App do Apps Script
-  APP_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbwQeQ94oIeEtOBhtJVIPkUcpjlhZ0l4LFUqDE-d-cSEIUC380RtSKNvzh79s1cSqs1oTA/exec',
+  APP_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbw-KNmpVWujTikzVUyMIofbWJG0a8Fs3F6byCh9bv8KzR4R5IHPLvSQI4f62l_NHndlJw/exec',
                   
   // Nomes das abas na planilha (devem corresponder exatamente)
   SHEETS: {
