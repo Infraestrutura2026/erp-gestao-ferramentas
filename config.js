@@ -28,7 +28,8 @@ const CONFIG = (() => {
   // Exemplo: 'https://script.google.com/macros/s/AKfycb.../exec'
   const URL_BASE =
     localStorage.getItem('sheets_url_base') ||
-    'https://script.google.com/macros/s/AKfycbw-KNmpVwujTikzVUyMIofbWJG0a8Fs3F6[COMPLETAR_AQUI]/exec';
+    'https://script.google.com/macros/s/AKfycbwlCL2WHg7rRUpJAKubZbVqsJ-2mJxrPGkWZyQYYWXoMqsJCnlk07DKie-32FnMfOH0AA/exec';
+  
 
   return buildConfig(URL_BASE);
 })();
