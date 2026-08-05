@@ -1,0 +1,21 @@
+id,data,tipo,item,quantidade,local,usuario,observacao
+1,2026-07-01,Entrada,Cimento Portland 50kg,20,Depósito C,admin,Recebimento fornecedor
+2,2026-07-02,Entrada,Tubo PVC 100mm Hidráulico,50,Depósito A,operador1,Reposição estoque
+3,2026-07-03,Saída,Parafusadeira 18V Makita,2,Oficina,operador2,Empréstimo setor manutenção
+4,2026-07-05,Entrada,Disjuntor bipolar 40A,15,Depósito B,admin,Compra emergencial
+5,2026-07-06,Saída,Fio elétrico 2,5mm,30,Depósito B,operador1,Obra reforma ala norte
+6,2026-07-08,Entrada,Areia média,40,Depósito C,operador2,Recebimento
+7,2026-07-10,Saída,Cimento Portland 50kg,10,Depósito C,admin,Reparo piso ala sul
+8,2026-07-12,Entrada,Esmerilhadeira 4.1/2 Dewalt,5,Oficina,operador1,Reposição
+9,2026-07-14,Saída,Tinta látex branca 18L,5,Depósito D,operador2,Pintura refeitório
+10,2026-07-15,Entrada,Papel A4 500 folhas,100,Almoxarifado,admin,Compra mensal
+11,2026-07-18,Saída,Extintor ABC 4kg,2,Galpão Segurança,operador1,Troca ala leste
+12,2026-07-20,Entrada,Registro esfera 3/4,20,Depósito A,operador2,Compra estoque
+13,2026-07-22,Saída,Serra circular 7.1/4 Skil,1,Oficina,admin,Manutenção externa
+14,2026-07-25,Entrada,Desinfetante concentrado 5L,30,Almoxarifado,operador1,Higiene
+15,2026-07-28,Saída,Máquina de solda MIG 200A,1,Oficina,operador2,Reparo grade ala norte
+16,2026-07-30,Entrada,Furadeira de impacto Bosch,3,Oficina,admin,Reposição
+17,2026-08-01,Saída,Chave de fenda Phillips,5,Oficina,operador2,Kit manutenção predial
+18,2026-08-02,Entrada,Cartucho toner HP 85A,5,Almoxarifado,admin,Suprimento TI
+19,2026-08-03,Saída,Mouse óptico USB,2,TI,operador1,Troca equipamento
+20,2026-08-05,Entrada,Broca Aço Rápido 10mm,20,Oficina,operador2,Compra estoque

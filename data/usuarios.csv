@@ -1,0 +1,4 @@
+id,nome,login,senha,perfil,ativo,setor,email,telefone,ultimoAcesso
+1,Cap. Ribeiro,admin,admin123,Administrador,Sim,Administrativo,admin@penal.sp.gov.br,(14) 99999-1111,2026-08-06
+2,Sgt. Oliveira,oliveira,oliveira2026,Operador,Sim,Manutenção,oliveira@penal.sp.gov.br,(14) 99999-2222,2026-08-05
+3,Ag. Souza,souza,souza2026,Operador,Sim,Segurança,souza@penal.sp.gov.br,(14) 99999-3333,2026-08-04

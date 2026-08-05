@@ -1,0 +1,11 @@
+id,data,item,quantidade,solicitante,setor,dataDevolucaoPrevista,status,observacao
+1,2026-07-03,Parafusadeira 18V Makita,2,Sgt. Oliveira,Manutenção,2026-07-10,Devolvido,Reparo grades
+2,2026-07-10,Furadeira de impacto Bosch,1,Ag. Souza,Construção,2026-07-17,Devolvido,Obra ala norte
+3,2026-07-15,Máquina de solda MIG 200A,1,Ag. Silva,Segurança,2026-07-22,Devolvido,Reparo portão
+4,2026-07-18,Esmerilhadeira 4.1/2 Dewalt,2,Ag. Lima,Manutenção,2026-07-25,Devolvido,Desbaste estrutura
+5,2026-07-20,Chave de impacto pneumática 1/2,1,Sgt. Oliveira,Automotivo,2026-07-27,Devolvido,Reparo viatura
+6,2026-07-22,Serra circular 7.1/4 Skil,1,Ag. Souza,Marcenaria,2026-07-29,Devolvido,Corte bancada
+7,2026-07-25,Macaco hidráulico 2T,1,Ag. Lima,Automotivo,2026-08-01,Devolvido,Manutenção viatura
+8,2026-07-28,Compressor de ar 50L,1,Sgt. Oliveira,Pintura,2026-08-04,Em uso,Pintura grades
+9,2026-08-01,Roçadeira lateral 2T,1,Ag. Silva,Jardinagem,2026-08-08,Em uso,Corte mato perímetro
+10,2026-08-03,Serra tico-tico Black&Decker,1,Ag. Souza,Marcenaria,2026-08-10,Em uso,Acabamento móveis
