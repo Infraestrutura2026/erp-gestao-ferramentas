@@ -1,4 +1,0 @@
-id,tipo,itemId,itemNome,quantidade,origem,destino,responsavel,data,observacao
-1,Entrada,1,Parafusadeira Bosch,2,Fornecedor,Almoxarifado,Sgt. Silva,2024-01-10,Compra mensal
-2,Saída,2,Furadeira DeWalt,1,Almoxarifado,Oficina A,Ag. Santos,2024-01-12,Manutenção
-3,Transferência,3,Chave de Fenda Kit,3,Almoxarifado,Oficina B,Ag. Costa,2024-01-15,Projeto reforma

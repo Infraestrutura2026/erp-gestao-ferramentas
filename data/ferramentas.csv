@@ -1,6 +1,0 @@
-id,nome,categoria,localizacao,status,condicao,responsavel,dataAquisicao,quantidade
-1,Parafusadeira Bosch,Ferramenta Elétrica,Oficina A,Disponível,Boa,Sgt. Silva,2023-01-15,5
-2,Furadeira DeWalt,Ferramenta Elétrica,Oficina A,Em uso,Boa,Ag. Santos,2023-02-20,3
-3,Chave de Fenda Kit,Ferramenta Manual,Almoxarifado,Disponível,Nova,Sgt. Silva,2023-03-10,12
-4,Serrote Stanley,Ferramenta Manual,Oficina B,Disponível,Regular,Ag. Costa,2022-11-05,4
-5,Trena 5m,Ferramenta Manual,Almoxarifado,Disponível,Nova,Sgt. Silva,2023-05-18,8
