@@ -1,0 +1,6 @@
+id,nome,categoria,quantidadeAtual,quantidadeMinima,local,status
+1,Parafusadeira Bosch,Ferramenta Elétrica,5,2,Oficina A,OK
+2,Furadeira DeWalt,Ferramenta Elétrica,3,1,Oficina A,OK
+3,Chave de Fenda Kit,Ferramenta Manual,12,5,Almoxarifado,OK
+4,Serrote Stanley,Ferramenta Manual,4,2,Oficina B,OK
+5,Trena 5m,Ferramenta Manual,8,3,Almoxarifado,OK
