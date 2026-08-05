@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Gestão de Ferramentas — Complexo Penal de Marília</title>
+  <meta name="description" content="Sistema de Gestão de Ferramentas e Estoque da Polícia Penal">
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slate: { 850: '#1e293b' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Chart.js (carregado sob demanda no indicadores.js) -->
+
+  <style>
+    /* Animações suaves */
+    .fade-in { animation: fadeIn 0.3s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Scrollbar elegante */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f5f9; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    /* Print styles */
+    @media print {
+      #sidebar, header, #sidebar-overlay, button[onclick*="export"], button[onclick*="print"] { display: none !important; }
+      #main-content { padding: 0 !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div id="app"></div>
+
+  <!--
+    ORDEM DE CARREGAMENTO DOS MÓDULOS:
+    1. config.js   → Configurações e URLs do Sheets
+    2. utils.js    → Funções utilitárias (cores, badges, escapeHtml)
+    3. estoque.js  → Tela de Estoque
+    4. ferramentas.js → Tela de Ferramentas (separada)
+    5. indicadores.js → Dashboard de gráficos
+    6. app.js      → Núcleo do sistema, navegação e sincronização
+  -->
+  <script src="config.js"></script>
+  <script src="utils.js"></script>
+  <script src="estoque.js"></script>
+  <script src="ferramentas.js"></script>
+  <script src="indicadores.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
