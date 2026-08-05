@@ -1,0 +1,52 @@
+id,nome,categoria,quantidadeAtual,quantidadeMinima,unidade,local,data,createdAt,updatedAt
+ea3ce453-900d-4046-a,Sifão pia 70 cm,Hidráulica,268,10,un,caixa na garagem da frota,2026-07-24,2026-07-24,2026-07-24
+3d5a28e3-ad9f-48bf-8,Chuveiro,Hidráulica,197,10,un,caixa na garagem da frota,2026-07-24,2026-07-24,2026-07-24
+cab792e9-1030-4095-a,Tubo de ligação sanfonado (vaso),Hidráulica,115,10,un,,2026-07-24,2026-07-24,2026-07-24
+122e284f-09fa-449b-8,Flexível plástico,Hidráulica,130,10,un,,2026-07-24,2026-07-24,2026-07-24
+8c52e31b-61d3-4594-8,Torneira plástica branca,Hidráulica,34,10,un,,2026-07-24,2026-07-24,2026-07-24
+985be8c3-e9f3-4911-b,Engate vaso sanitário,Hidráulica,144,10,un,,2026-07-24,2026-07-24,2026-07-24
+99074f4f-29e4-43cd-a,Parafuso p/ vaso sanitário,Hidráulica,300,10,un,,2026-07-24,2026-07-24,2026-07-24
+ae561657-af6d-4caa-a,Abraçadeira para cano,Hidráulica,600,20,un,,2026-07-24,2026-07-24,2026-07-24
+fe4fb390-0e07-4e4c-a,Tubo para descarga,Hidráulica,28,10,un,,2026-07-24,2026-07-24,2026-07-24
+a2c0fe4e-9219-42fe-a,Joelho 90 de esgoto,Hidráulica,65,10,un,,2026-07-24,2026-07-24,2026-07-24
+47cbd190-9398-46a6-b,Assento para vaso,Hidráulica,3,1,un,,2026-07-24,2026-07-24,2026-07-24
+0d4febf9-363a-4a73-b,Caixa de ligação esgoto,Hidráulica,7,2,un,,2026-07-24,2026-07-24,2026-07-24
+37bae24d-30f3-4370-9,Caixa acoplada vaso sanitário,Hidráulica,1,1,un,,2026-07-24,2026-07-24,2026-07-24
+38fc1b93-dee8-4067-8,Caixa de descarga para vaso,Hidráulica,114,10,un,,2026-07-24,2026-07-24,2026-07-24
+f5f3787c-479f-4e7d-9,Fio branco 6mm - bobina,Elétrica,10,2,un,,2026-07-24,2026-07-24,2026-07-24
+4552dffe-a9f7-4a31-a,Fio vermelho 6mm - bonina,Elétrica,10,2,un,,2026-07-24,2026-07-24,2026-07-24
+9d5ee2c8-5078-47b1-b,Fio azul 6mm - bobina,Elétrica,10,2,un,,2026-07-24,2026-07-24,2026-07-24
+2dc1a25a-d7cb-46b5-b,Fio preto 6mm - Bobina,Elétrica,10,2,un,,2026-07-24,2026-07-24,2026-07-24
+1f7ba7d3-69b5-4878-a,Fio verde 4mm - bobina,Elétrica,7,2,un,,2026-07-24,2026-07-24,2026-07-24
+ef4e6b20-af66-49af-8,Fio azul 4mm - bobina,Elétrica,5,2,un,,2026-07-24,2026-07-24,2026-07-24
+4faa5492-b469-4f8f-9,Fio preto 4mm - bobina,Elétrica,4,2,un,,2026-07-24,2026-07-24,2026-07-24
+6f1abc4f-3542-49ec-8,Fio vermelho 2,50mm - bobina,Elétrica,15,2,un,,2026-07-24,2026-07-24,2026-07-24
+22677d70-adfe-4adc-9,Fio azul 2,50mm - bobina,Elétrica,10,2,un,,2026-07-24,2026-07-24,2026-07-24
+7d3a90dc-a5b8-44be-8,Fio branco 2,50mm - bobina,Elétrica,9,2,un,,2026-07-24,2026-07-24,2026-07-24
+8f8d66f6-ea4f-4534-9,Tomada 2 polos 10A/250V,Elétrica,52,5,un,,2026-07-24,2026-07-24,2026-07-24
+ca9fdc7b-f0c1-4450-b,Tomada externa 2 polos + T 10A,Elétrica,106,10,un,,2026-07-24,2026-07-24,2026-07-24
+980a6efb-3de9-48da-9,Tomada 1 completa 10A,Elétrica,24,10,un,,2026-07-24,2026-07-24,2026-07-24
+79af884c-d245-4398-b,Interruptor 1 completo,Elétrica,99,10,un,,2026-07-24,2026-07-24,2026-07-24
+0d2a0b36-c0b1-4cab-b,Interruptor de 3 completos,Elétrica,23,5,un,,2026-07-24,2026-07-24,2026-07-24
+d5792262-7422-4e87-9,Tomada 2 polos 10A (caixas + unidades),Elétrica,23,8,un,,2026-07-24,2026-07-24,2026-07-24
+ac35d98c-552e-4da4-9,Soquete liso spot porcelana,Elétrica,190,10,un,,2026-07-24,2026-07-24,2026-07-24
+eb988714-4afd-4cfc-b,Soquete completo uso interno,Elétrica,98,10,un,,2026-07-24,2026-07-24,2026-07-24
+22ef9840-3d6f-4aa2-b,Limpador de para-brisa S10,Automotivo,3,1,un,,2026-07-24,2026-07-24,2026-07-24
+4caadc9d-6a78-4aa7-8,Limpador de para-brisa Cargo,Automotivo,1,1,un,,2026-07-24,2026-07-24,2026-07-24
+d1d9c766-e470-45d8-8,Parafuso prisioneiro de motor elétrico,,59,10,un,,2026-07-24,2026-07-24,2026-07-24
+4572bed0-a8a9-443b-9,Cabo de serra de mão completo,Construção,3,1,un,,2026-07-24,2026-07-24,2026-07-24
+baa084cc-09b0-49c3-a,Galão de higienizador de ar condicionado 5L,,1,1,un,,2026-07-24,2026-07-24,2026-07-24
+76f6120c-ca71-44cb-9,Refletor IP66 6500K branco frio bivolt,Elétrica,13,2,un,,2026-07-24,2026-07-24,2026-07-24
+2cceaf4f-6d1b-418c-a,Lâmpada 100W bivolt 127/220V,Elétrica,1,1,un,,2026-07-24,2026-07-24,2026-07-24
+cdb8740f-8990-4af0-a,Placa 4x2,Elétrica,10,2,un,,2026-07-24,2026-07-24,2026-07-24
+2753eacf-ce8d-43db-b,Central de cerca elétrica,Segurança/Elétrica,2,1,un,,2026-07-24,2026-07-24,2026-07-24
+68d8a244-0417-4ca1-9,Fita veda rosca,Hidráulica,82,10,un,,2026-07-24,2026-07-24,2026-07-24
+1bb9956c-6a14-42af-a,Disco corte inox 180x1.6 - ( 7 polegadas de diâmetro e 1,6 mm de espessura),Construção,48,10,un,,2026-07-24,2026-07-24,2026-07-24
+91c3befd-3bc2-4934-b,Disco de desbaste - 4.1/2 polegadas (115 mm),Construção,50,10,un,,2026-07-24,2026-07-24,2026-07-24
+492bc36e-5fc4-4bda-a,Disjuntor 1x16A,Elétrica,1,1,un,,2026-07-24,2026-07-24,2026-07-24
+7ac50fd3-f325-4aba-8,Disjuntor 1x25A,Elétrica,1,1,un,,2026-07-24,2026-07-24,2026-07-24
+eadb5aa2-e22a-42a5-a,Disjuntor 10A,Elétrica,2,1,un,,2026-07-24,2026-07-24,2026-07-24
+89a49e24-2629-4fb6-b,Disjuntor C25,Elétrica,15,5,un,,2026-07-24,2026-07-24,2026-07-24
+f5685d1c-770c-490d-9,DPS T2 - (Dispositivo de Proteção contra Surtos de Classe 2),Elétrica,6,2,un,,2026-07-24,2026-07-24,2026-07-24
+920e6450-837f-46a3-9,Fechadura interna porta soprana,Construção,6,1,un,,2026-07-24,2026-07-24,2026-07-24
+d5d11734-1555-4ec4-8,Fechadura WC porta soprana,Construção,3,1,un,,2026-07-24,2026-07-24,2026-07-24
