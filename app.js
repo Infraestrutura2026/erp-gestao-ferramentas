@@ -152,13 +152,12 @@ const authModule = {
     return this.getCurrentRole() === 'admin';
   },
 
-  fillLogin(username, password) {
+  fillLogin(username) {
     const userInput = document.getElementById('login-user');
     const passInput = document.getElementById('login-pass');
     if (userInput) userInput.value = username;
-    if (passInput) passInput.value = password;
-    // Foca no botão de login ou já faz login direto
-    passInput?.focus();
+    if (passInput) { passInput.value = ''; passInput.focus(); }
+    // Limpa erro
     const errorDiv = document.getElementById('login-error');
     if (errorDiv) errorDiv.classList.add('hidden');
   }
@@ -492,17 +491,17 @@ const app = {
     const roleLabel = role === 'admin' ? 'Administrador' : 'Operador';
 
     root.innerHTML = `
-      <div class="min-h-screen bg-slate-50 flex">
+      <div class="min-h-screen bg-[#0a0a0a] flex">
         <!-- Sidebar -->
-        <aside id="sidebar" class="w-64 bg-slate-900 text-white flex flex-col shadow-xl transition-transform duration-300 fixed inset-y-0 left-0 z-50 lg:relative lg:translate-x-0 -translate-x-full">
-          <div class="px-5 py-5 border-b border-slate-700">
+        <aside id="sidebar" class="w-64 bg-[#0f0f0f] text-white flex flex-col shadow-xl transition-transform duration-300 fixed inset-y-0 left-0 z-50 lg:relative lg:translate-x-0 -translate-x-full">
+          <div class="px-5 py-5 border-b border-[#2a2a2a]">
             <div class="flex items-center gap-3 mb-1">
-              <div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center shadow-lg shrink-0">
-                <i class="fas fa-toolbox text-slate-900 text-lg"></i>
+              <div class="w-10 h-10 rounded-lg bg-amber-600 flex items-center justify-center shadow-lg shrink-0">
+                <i class="fas fa-toolbox text-black text-lg"></i>
               </div>
               <div class="min-w-0">
                 <h1 class="font-bold text-sm leading-tight truncate">Ferramentas & Estoque</h1>
-                <p class="text-[10px] text-slate-400 uppercase tracking-wider truncate">${orgao}</p>
+                <p class="text-[10px] text-gray-500 uppercase tracking-wider truncate">${orgao}</p>
               </div>
             </div>
           </div>
@@ -517,8 +516,8 @@ const app = {
             ${this._navItem('relatorios', 'fa-file-alt', 'Relatórios')}
           </nav>
 
-          <div class="px-3 py-3 border-t border-slate-700 space-y-2">
-            <button onclick="app.syncAll(true)" class="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-900 text-sm font-semibold transition shadow">
+          <div class="px-3 py-3 border-t border-[#2a2a2a] space-y-2">
+            <button onclick="app.syncAll(true)" class="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-amber-600 hover:bg-amber-400 text-white text-sm font-semibold transition shadow">
               <i class="fas fa-sync-alt" id="sync-icon"></i>
               <span>Sincronizar</span>
             </button>
@@ -526,7 +525,7 @@ const app = {
               <i class="fas fa-sign-out-alt"></i>
               <span>Sair</span>
             </button>
-            <p id="sync-status" class="text-[10px] text-slate-400 text-center">Aguardando sincronização...</p>
+            <p id="sync-status" class="text-[10px] text-gray-500 text-center">Aguardando sincronização...</p>
           </div>
         </aside>
 
@@ -536,21 +535,21 @@ const app = {
         <!-- Main -->
         <div class="flex-1 flex flex-col min-w-0">
           <!-- Topbar -->
-          <header class="bg-white border-b border-slate-200 px-4 py-3 flex items-center justify-between sticky top-0 z-30">
-            <button onclick="app._toggleSidebar()" class="lg:hidden p-2 rounded-lg hover:bg-slate-100 text-slate-600">
+          <header class="bg-[#141414] border-b border-[#2a2a2a] px-4 py-3 flex items-center justify-between sticky top-0 z-30">
+            <button onclick="app._toggleSidebar()" class="lg:hidden p-2 rounded-lg hover:bg-[#1a1a1a] text-gray-400">
               <i class="fas fa-bars"></i>
             </button>
             <div class="flex items-center gap-3 min-w-0">
-              <span id="page-title" class="font-bold text-slate-800 truncate">Dashboard</span>
-              <span id="sync-badge" class="hidden text-[10px] px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-medium whitespace-nowrap">Sincronizado</span>
+              <span id="page-title" class="font-bold text-white truncate">Dashboard</span>
+              <span id="sync-badge" class="hidden text-[10px] px-2 py-0.5 rounded-full bg-green-900/30 text-green-400 border border-green-800/50 font-medium whitespace-nowrap">Sincronizado</span>
             </div>
             <div class="flex items-center gap-3 shrink-0">
-              <span class="text-xs text-slate-500 hidden sm:inline">${new Date().toLocaleDateString('pt-BR')}</span>
+              <span class="text-xs text-gray-500 hidden sm:inline">${new Date().toLocaleDateString('pt-BR')}</span>
               <div class="text-right hidden md:block">
-                <p class="text-[10px] text-slate-400 leading-tight">${usuario}</p>
-                <p class="text-[10px] text-amber-600 font-semibold leading-tight">${roleLabel}</p>
+                <p class="text-[10px] text-gray-500 leading-tight">${usuario}</p>
+                <p class="text-[10px] text-amber-400 font-semibold leading-tight">${roleLabel}</p>
               </div>
-              <div class="w-8 h-8 rounded-full bg-slate-800 text-amber-400 flex items-center justify-center text-xs font-bold border-2 border-amber-500 shrink-0" title="${usuario}">
+              <div class="w-8 h-8 rounded-full bg-[#1a1a1a] text-amber-400 flex items-center justify-center text-xs font-bold border-2 border-amber-500 shrink-0" title="${usuario}">
                 ${usuario.charAt(0).toUpperCase()}
               </div>
             </div>
@@ -571,7 +570,7 @@ const app = {
 
   _navItem(page, icon, label) {
     return `
-      <button data-page="${page}" onclick="app.navigate('${page}')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white transition">
+      <button data-page="${page}" onclick="app.navigate('${page}')" class="nav-item w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-gray-400 hover:bg-[#1a1a1a] hover:text-white transition">
         <i class="fas ${icon} w-5 text-center"></i>
         <span>${label}</span>
       </button>
@@ -581,9 +580,9 @@ const app = {
   _updateActiveNav() {
     document.querySelectorAll('.nav-item').forEach(btn => {
       const isActive = btn.dataset.page === this.currentPage;
-      btn.classList.toggle('bg-slate-800', isActive);
+      btn.classList.toggle('bg-[#1a1a1a]', isActive);
       btn.classList.toggle('text-white', isActive);
-      btn.classList.toggle('text-slate-300', !isActive);
+      btn.classList.toggle('text-gray-400', !isActive);
       if (isActive) btn.classList.add('shadow-sm');
       else btn.classList.remove('shadow-sm');
     });
@@ -618,7 +617,7 @@ const app = {
     if (this.lastSync) {
       const timeStr = this.lastSync.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
       if (badge) { badge.classList.remove('hidden'); badge.textContent = this.syncErrors.length ? 'Com erros' : 'Sincronizado'; }
-      if (badge && this.syncErrors.length) { badge.className = 'text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium whitespace-nowrap'; }
+      if (badge && this.syncErrors.length) { badge.className = 'text-[10px] px-2 py-0.5 rounded-full bg-amber-900/30 text-amber-400 border border-amber-800/50 font-medium whitespace-nowrap'; }
       if (status) status.textContent = `Última: ${timeStr}`;
     }
   },
@@ -677,46 +676,46 @@ const app = {
       <div class="space-y-6">
         <!-- Cards resumo -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+          <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-5">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-xs text-slate-500 uppercase font-semibold">Itens em Estoque</p>
-                <p class="text-2xl font-bold text-slate-800 mt-1">${totalItens}</p>
+                <p class="text-xs text-gray-500 uppercase font-semibold">Itens em Estoque</p>
+                <p class="text-2xl font-bold text-white mt-1">${totalItens}</p>
               </div>
-              <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+              <div class="w-10 h-10 rounded-lg bg-blue-900/30 flex items-center justify-center text-blue-400">
                 <i class="fas fa-boxes"></i>
               </div>
             </div>
           </div>
-          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+          <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-5">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-xs text-slate-500 uppercase font-semibold">Ferramentas</p>
-                <p class="text-2xl font-bold text-slate-800 mt-1">${totalFerramentas}</p>
+                <p class="text-xs text-gray-500 uppercase font-semibold">Ferramentas</p>
+                <p class="text-2xl font-bold text-white mt-1">${totalFerramentas}</p>
               </div>
-              <div class="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600">
+              <div class="w-10 h-10 rounded-lg bg-amber-900/30 flex items-center justify-center text-amber-400">
                 <i class="fas fa-tools"></i>
               </div>
             </div>
           </div>
-          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+          <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-5">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-xs text-slate-500 uppercase font-semibold">Movimentações</p>
-                <p class="text-2xl font-bold text-slate-800 mt-1">${totalMov}</p>
+                <p class="text-xs text-gray-500 uppercase font-semibold">Movimentações</p>
+                <p class="text-2xl font-bold text-white mt-1">${totalMov}</p>
               </div>
-              <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
+              <div class="w-10 h-10 rounded-lg bg-green-900/30 flex items-center justify-center text-green-400">
                 <i class="fas fa-exchange-alt"></i>
               </div>
             </div>
           </div>
-          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+          <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-5">
             <div class="flex items-center justify-between">
               <div>
-                <p class="text-xs text-slate-500 uppercase font-semibold">Críticos / Esgotados</p>
-                <p class="text-2xl font-bold ${zerados > 0 ? 'text-red-600' : criticos > 0 ? 'text-amber-600' : 'text-slate-800'} mt-1">${zerados + criticos}</p>
+                <p class="text-xs text-gray-500 uppercase font-semibold">Críticos / Esgotados</p>
+                <p class="text-2xl font-bold ${zerados > 0 ? 'text-red-400' : criticos > 0 ? 'text-amber-400' : 'text-white'} mt-1">${zerados + criticos}</p>
               </div>
-              <div class="w-10 h-10 rounded-lg ${zerados > 0 ? 'bg-red-100 text-red-600' : criticos > 0 ? 'bg-amber-100 text-amber-600' : 'bg-slate-100 text-slate-600'} flex items-center justify-center">
+              <div class="w-10 h-10 rounded-lg ${zerados > 0 ? 'bg-red-100 text-red-400' : criticos > 0 ? 'bg-amber-100 text-amber-400' : 'bg-[#1a1a1a] text-gray-400'} flex items-center justify-center">
                 <i class="fas ${zerados > 0 ? 'fa-exclamation-triangle' : criticos > 0 ? 'fa-exclamation-circle' : 'fa-check-circle'}"></i>
               </div>
             </div>
@@ -725,71 +724,71 @@ const app = {
 
         <!-- Alertas -->
         ${zerados > 0 ? `
-        <div class="bg-red-50 border border-red-200 rounded-xl p-4 flex items-start gap-3">
-          <i class="fas fa-exclamation-triangle text-red-500 mt-0.5"></i>
+        <div class="bg-red-900/20 border border-red-800/50 rounded-xl p-4 flex items-start gap-3">
+          <i class="fas fa-exclamation-triangle text-red-400 mt-0.5"></i>
           <div>
-            <p class="text-sm font-bold text-red-700">${zerados} item(s) esgotado(s)</p>
-            <p class="text-xs text-red-600 mt-1">Verifique a tela de Estoque para reposição.</p>
+            <p class="text-sm font-bold text-red-400">${zerados} item(s) esgotado(s)</p>
+            <p class="text-xs text-red-400 mt-1">Verifique a tela de Estoque para reposição.</p>
           </div>
         </div>
         ` : ''}
 
         ${criticos > 0 ? `
-        <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
-          <i class="fas fa-exclamation-circle text-amber-500 mt-0.5"></i>
+        <div class="bg-amber-900/20 border border-amber-800/50 rounded-xl p-4 flex items-start gap-3">
+          <i class="fas fa-exclamation-circle text-amber-400 mt-0.5"></i>
           <div>
-            <p class="text-sm font-bold text-amber-700">${criticos} item(s) em nível crítico</p>
-            <p class="text-xs text-amber-600 mt-1">Quantidade abaixo ou igual ao mínimo permitido.</p>
+            <p class="text-sm font-bold text-amber-400">${criticos} item(s) em nível crítico</p>
+            <p class="text-xs text-amber-400 mt-1">Quantidade abaixo ou igual ao mínimo permitido.</p>
           </div>
         </div>
         ` : ''}
 
         <!-- Gráfico de status -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5">
-            <h3 class="text-sm font-bold text-slate-700 mb-4">Status do Estoque</h3>
+          <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-5">
+            <h3 class="text-sm font-bold text-gray-300 mb-4">Status do Estoque</h3>
             <div class="space-y-3">
               <div class="flex items-center justify-between">
-                <span class="text-sm text-slate-600">✅ Normal</span>
-                <span class="text-sm font-bold text-slate-800">${ok}</span>
+                <span class="text-sm text-gray-400">✅ Normal</span>
+                <span class="text-sm font-bold text-white">${ok}</span>
               </div>
-              <div class="w-full bg-slate-100 rounded-full h-2">
-                <div class="bg-green-500 h-2 rounded-full" style="width: ${totalItens ? (ok/totalItens*100) : 0}%"></div>
-              </div>
-              <div class="flex items-center justify-between">
-                <span class="text-sm text-slate-600">⚠️ Crítico</span>
-                <span class="text-sm font-bold text-amber-600">${criticos}</span>
-              </div>
-              <div class="w-full bg-slate-100 rounded-full h-2">
-                <div class="bg-amber-500 h-2 rounded-full" style="width: ${totalItens ? (criticos/totalItens*100) : 0}%"></div>
+              <div class="w-full bg-[#1a1a1a] rounded-full h-2">
+                <div class="bg-green-600 h-2 rounded-full" style="width: ${totalItens ? (ok/totalItens*100) : 0}%"></div>
               </div>
               <div class="flex items-center justify-between">
-                <span class="text-sm text-slate-600">❌ Esgotado</span>
-                <span class="text-sm font-bold text-red-600">${zerados}</span>
+                <span class="text-sm text-gray-400">⚠️ Crítico</span>
+                <span class="text-sm font-bold text-amber-400">${criticos}</span>
               </div>
-              <div class="w-full bg-slate-100 rounded-full h-2">
-                <div class="bg-red-500 h-2 rounded-full" style="width: ${totalItens ? (zerados/totalItens*100) : 0}%"></div>
+              <div class="w-full bg-[#1a1a1a] rounded-full h-2">
+                <div class="bg-amber-600 h-2 rounded-full" style="width: ${totalItens ? (criticos/totalItens*100) : 0}%"></div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-400">❌ Esgotado</span>
+                <span class="text-sm font-bold text-red-400">${zerados}</span>
+              </div>
+              <div class="w-full bg-[#1a1a1a] rounded-full h-2">
+                <div class="bg-red-600 h-2 rounded-full" style="width: ${totalItens ? (zerados/totalItens*100) : 0}%"></div>
               </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-5 lg:col-span-2">
-            <h3 class="text-sm font-bold text-slate-700 mb-4">Últimas Movimentações</h3>
+          <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-5 lg:col-span-2">
+            <h3 class="text-sm font-bold text-gray-300 mb-4">Últimas Movimentações</h3>
             ${recentes.length ? `
               <div class="overflow-x-auto">
                 <table class="w-full text-sm">
-                  <thead><tr class="bg-slate-50 border-b border-slate-200">
-                    <th class="px-4 py-2 text-left font-semibold text-slate-600">Data</th>
-                    <th class="px-4 py-2 text-left font-semibold text-slate-600">Tipo</th>
-                    <th class="px-4 py-2 text-left font-semibold text-slate-600">Item</th>
-                    <th class="px-4 py-2 text-center font-semibold text-slate-600">Qtd</th>
+                  <thead><tr class="bg-[#1a1a1a] border-b border-[#2a2a2a]">
+                    <th class="px-4 py-2 text-left font-semibold text-gray-400">Data</th>
+                    <th class="px-4 py-2 text-left font-semibold text-gray-400">Tipo</th>
+                    <th class="px-4 py-2 text-left font-semibold text-gray-400">Item</th>
+                    <th class="px-4 py-2 text-center font-semibold text-gray-400">Qtd</th>
                   </tr></thead>
                   <tbody>
                     ${recentes.map(m => {
                       const tipo = (m.tipo || m.operacao || 'Mov.').toLowerCase();
-                      const tipoClass = tipo.includes('entrada') || tipo.includes('compra') ? 'text-green-600' : tipo.includes('saida') || tipo.includes('retirada') ? 'text-red-600' : 'text-slate-600';
-                      return `<tr class="border-b border-slate-100 hover:bg-slate-50/60">
-                        <td class="px-4 py-2 text-slate-500">${m.data || m.dataHora || '—'}</td>
+                      const tipoClass = tipo.includes('entrada') || tipo.includes('compra') ? 'text-green-400' : tipo.includes('saida') || tipo.includes('retirada') ? 'text-red-400' : 'text-gray-400';
+                      return `<tr class="border-b border-[#1f1f1f] hover:bg-[#0a0a0a]/60">
+                        <td class="px-4 py-2 text-gray-500">${m.data || m.dataHora || '—'}</td>
                         <td class="px-4 py-2 font-semibold ${tipoClass}">${utils.escapeHtml(m.tipo || m.operacao || '—')}</td>
                         <td class="px-4 py-2">${utils.escapeHtml(m.itemNome || m.item || m.nome || '—')}</td>
                         <td class="px-4 py-2 text-center font-mono">${m.quantidade || '—'}</td>
@@ -798,7 +797,7 @@ const app = {
                   </tbody>
                 </table>
               </div>
-            ` : '<p class="text-slate-400 text-center py-8">Nenhuma movimentação recente.</p>'}
+            ` : '<p class="text-gray-500 text-center py-8">Nenhuma movimentação recente.</p>'}
           </div>
         </div>
       </div>
@@ -815,26 +814,26 @@ const app = {
   _renderEmprestimos(container) {
     const items = app.data.emprestimos || [];
     container.innerHTML = `
-      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-6">
         <div class="flex items-center justify-between mb-4">
-          <h2 class="text-lg font-bold text-slate-800">Empréstimos</h2>
-          <span class="text-xs text-slate-500">${items.length} registros</span>
+          <h2 class="text-lg font-bold text-white">Empréstimos</h2>
+          <span class="text-xs text-gray-500">${items.length} registros</span>
         </div>
         ${items.length ? `
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
-              <thead><tr class="bg-slate-50 border-b border-slate-200">
-                <th class="px-4 py-2 text-left font-semibold text-slate-600">Data</th>
-                <th class="px-4 py-2 text-left font-semibold text-slate-600">Item</th>
-                <th class="px-4 py-2 text-left font-semibold text-slate-600">Solicitante</th>
-                <th class="px-4 py-2 text-center font-semibold text-slate-600">Qtd</th>
-                <th class="px-4 py-2 text-center font-semibold text-slate-600">Status</th>
+              <thead><tr class="bg-[#1a1a1a] border-b border-[#2a2a2a]">
+                <th class="px-4 py-2 text-left font-semibold text-gray-400">Data</th>
+                <th class="px-4 py-2 text-left font-semibold text-gray-400">Item</th>
+                <th class="px-4 py-2 text-left font-semibold text-gray-400">Solicitante</th>
+                <th class="px-4 py-2 text-center font-semibold text-gray-400">Qtd</th>
+                <th class="px-4 py-2 text-center font-semibold text-gray-400">Status</th>
               </tr></thead>
               <tbody>
                 ${items.map(e => {
                   const st = (e.status || 'Pendente').toLowerCase();
-                  const stClass = st.includes('devol') ? 'bg-green-100 text-green-700' : st.includes('atras') ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-700';
-                  return `<tr class="border-b border-slate-100 hover:bg-slate-50/60">
+                  const stClass = st.includes('devol') ? 'bg-green-900/30 text-green-400 border border-green-800/50' : st.includes('atras') ? 'bg-red-900/30 text-red-400 border border-red-800/50' : 'bg-amber-900/30 text-amber-400 border border-amber-800/50';
+                  return `<tr class="border-b border-[#1f1f1f] hover:bg-[#0a0a0a]/60">
                     <td class="px-4 py-2">${e.data || '—'}</td>
                     <td class="px-4 py-2 font-medium">${utils.escapeHtml(e.item || e.nome || '—')}</td>
                     <td class="px-4 py-2">${utils.escapeHtml(e.solicitante || e.usuario || '—')}</td>
@@ -845,7 +844,7 @@ const app = {
               </tbody>
             </table>
           </div>
-        ` : '<p class="text-slate-400 text-center py-8">Nenhum empréstimo registrado.</p>'}
+        ` : '<p class="text-gray-500 text-center py-8">Nenhum empréstimo registrado.</p>'}
       </div>`;
   },
 
@@ -853,27 +852,27 @@ const app = {
   _renderHistorico(container) {
     const hist = app.data.historico || app.data.movimentacoes || [];
     container.innerHTML = `
-      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-6">
         <div class="flex items-center justify-between mb-4">
-          <h2 class="text-lg font-bold text-slate-800">Histórico de Movimentações</h2>
-          <span class="text-xs text-slate-500">${hist.length} registros</span>
+          <h2 class="text-lg font-bold text-white">Histórico de Movimentações</h2>
+          <span class="text-xs text-gray-500">${hist.length} registros</span>
         </div>
         ${hist.length ? `
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
-              <thead><tr class="bg-slate-50 border-b border-slate-200">
-                <th class="px-4 py-2 text-left font-semibold text-slate-600">Data/Hora</th>
-                <th class="px-4 py-2 text-left font-semibold text-slate-600">Operação</th>
-                <th class="px-4 py-2 text-left font-semibold text-slate-600">Item</th>
-                <th class="px-4 py-2 text-center font-semibold text-slate-600">Qtd</th>
-                <th class="px-4 py-2 text-left font-semibold text-slate-600">Usuário</th>
+              <thead><tr class="bg-[#1a1a1a] border-b border-[#2a2a2a]">
+                <th class="px-4 py-2 text-left font-semibold text-gray-400">Data/Hora</th>
+                <th class="px-4 py-2 text-left font-semibold text-gray-400">Operação</th>
+                <th class="px-4 py-2 text-left font-semibold text-gray-400">Item</th>
+                <th class="px-4 py-2 text-center font-semibold text-gray-400">Qtd</th>
+                <th class="px-4 py-2 text-left font-semibold text-gray-400">Usuário</th>
               </tr></thead>
               <tbody>
                 ${hist.map(h => {
                   const op = (h.operacao || h.tipo || 'Mov.').toLowerCase();
-                  const opClass = op.includes('entrada') || op.includes('compra') ? 'text-green-600' : op.includes('saida') || op.includes('retirada') ? 'text-red-600' : 'text-slate-600';
-                  return `<tr class="border-b border-slate-100 hover:bg-slate-50/60">
-                    <td class="px-4 py-2 text-slate-500">${h.data || h.dataHora || '—'}</td>
+                  const opClass = op.includes('entrada') || op.includes('compra') ? 'text-green-400' : op.includes('saida') || op.includes('retirada') ? 'text-red-400' : 'text-gray-400';
+                  return `<tr class="border-b border-[#1f1f1f] hover:bg-[#0a0a0a]/60">
+                    <td class="px-4 py-2 text-gray-500">${h.data || h.dataHora || '—'}</td>
                     <td class="px-4 py-2 font-semibold ${opClass}">${utils.escapeHtml(h.operacao || h.tipo || '—')}</td>
                     <td class="px-4 py-2">${utils.escapeHtml(h.item || h.nome || '—')}</td>
                     <td class="px-4 py-2 text-center font-mono">${h.quantidade || '—'}</td>
@@ -883,7 +882,7 @@ const app = {
               </tbody>
             </table>
           </div>
-        ` : '<p class="text-slate-400 text-center py-8">Nenhum histórico disponível.</p>'}
+        ` : '<p class="text-gray-500 text-center py-8">Nenhum histórico disponível.</p>'}
       </div>`;
   },
 
@@ -909,40 +908,40 @@ const app = {
 
     container.innerHTML = `
       <div class="space-y-6">
-        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-          <h2 class="text-lg font-bold text-slate-800 mb-4">📊 Relatório de Estoque</h2>
+        <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-6">
+          <h2 class="text-lg font-bold text-white mb-4">📊 Relatório de Estoque</h2>
           <div class="grid grid-cols-3 gap-4 mb-6">
-            <div class="bg-slate-50 rounded-lg p-4 text-center">
-              <p class="text-2xl font-bold text-slate-800">${total}</p>
-              <p class="text-xs text-slate-500 uppercase">Total de Itens</p>
+            <div class="bg-[#0a0a0a] rounded-lg p-4 text-center">
+              <p class="text-2xl font-bold text-white">${total}</p>
+              <p class="text-xs text-gray-500 uppercase">Total de Itens</p>
             </div>
-            <div class="bg-red-50 rounded-lg p-4 text-center">
-              <p class="text-2xl font-bold text-red-600">${zerados}</p>
-              <p class="text-xs text-red-500 uppercase">Esgotados</p>
+            <div class="bg-red-900/20 rounded-lg p-4 text-center">
+              <p class="text-2xl font-bold text-red-400">${zerados}</p>
+              <p class="text-xs text-red-400 uppercase">Esgotados</p>
             </div>
-            <div class="bg-amber-50 rounded-lg p-4 text-center">
-              <p class="text-2xl font-bold text-amber-600">${criticos}</p>
-              <p class="text-xs text-amber-500 uppercase">Críticos</p>
+            <div class="bg-amber-900/20 rounded-lg p-4 text-center">
+              <p class="text-2xl font-bold text-amber-400">${criticos}</p>
+              <p class="text-xs text-amber-400 uppercase">Críticos</p>
             </div>
           </div>
 
-          <h3 class="text-sm font-bold text-slate-700 mb-3">Por Categoria</h3>
+          <h3 class="text-sm font-bold text-gray-300 mb-3">Por Categoria</h3>
           <div class="overflow-x-auto">
             <table class="w-full text-sm">
-              <thead><tr class="bg-slate-50 border-b border-slate-200">
-                <th class="px-4 py-2 text-left font-semibold text-slate-600">Categoria</th>
-                <th class="px-4 py-2 text-center font-semibold text-slate-600">Itens</th>
-                <th class="px-4 py-2 text-center font-semibold text-slate-600">Qtd Total</th>
-                <th class="px-4 py-2 text-center font-semibold text-slate-600">Esgotados</th>
+              <thead><tr class="bg-[#1a1a1a] border-b border-[#2a2a2a]">
+                <th class="px-4 py-2 text-left font-semibold text-gray-400">Categoria</th>
+                <th class="px-4 py-2 text-center font-semibold text-gray-400">Itens</th>
+                <th class="px-4 py-2 text-center font-semibold text-gray-400">Qtd Total</th>
+                <th class="px-4 py-2 text-center font-semibold text-gray-400">Esgotados</th>
               </tr></thead>
               <tbody>
                 ${Object.entries(catMap).sort((a, b) => b[1].count - a[1].count).map(([cat, info]) => `
-                  <tr class="border-b border-slate-100 hover:bg-slate-50/60">
+                  <tr class="border-b border-[#1f1f1f] hover:bg-[#0a0a0a]/60">
                     <td class="px-4 py-2">${utils.categoriaBadge(cat)}</td>
                     <td class="px-4 py-2 text-center font-medium">${info.count}</td>
                     <td class="px-4 py-2 text-center font-mono">${info.qtd}</td>
                     <td class="px-4 py-2 text-center">
-                      ${info.zerados > 0 ? `<span class="text-red-600 font-bold">${info.zerados}</span>` : '<span class="text-slate-400">—</span>'}
+                      ${info.zerados > 0 ? `<span class="text-red-400 font-bold">${info.zerados}</span>` : '<span class="text-gray-500">—</span>'}
                     </td>
                   </tr>
                 `).join('')}
@@ -951,16 +950,16 @@ const app = {
           </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-          <h3 class="text-sm font-bold text-slate-700 mb-3">📥 Exportar Dados</h3>
+        <div class="bg-[#141414] rounded-xl shadow-sm border border-[#2a2a2a] p-6">
+          <h3 class="text-sm font-bold text-gray-300 mb-3">📥 Exportar Dados</h3>
           <div class="flex flex-wrap gap-3">
-            <button onclick="app._exportCSV('estoque')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-medium rounded-lg transition">
+            <button onclick="app._exportCSV('estoque')" class="px-4 py-2 bg-[#1a1a1a] hover:bg-[#2a2a2a] text-white text-sm font-medium rounded-lg transition">
               <i class="fas fa-file-csv mr-1"></i> Estoque CSV
             </button>
-            <button onclick="app._exportCSV('ferramentas')" class="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-slate-900 text-sm font-medium rounded-lg transition">
+            <button onclick="app._exportCSV('ferramentas')" class="px-4 py-2 bg-amber-600 hover:bg-amber-400 text-white text-sm font-medium rounded-lg transition">
               <i class="fas fa-file-csv mr-1"></i> Ferramentas CSV
             </button>
-            <button onclick="window.print()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium rounded-lg transition">
+            <button onclick="window.print()" class="px-4 py-2 bg-[#1a1a1a] hover:bg-[#2a2a2a] text-gray-300 text-sm font-medium rounded-lg transition">
               <i class="fas fa-print mr-1"></i> Imprimir
             </button>
           </div>
@@ -994,15 +993,15 @@ const app = {
     modal.className = 'fixed inset-0 z-50 flex items-center justify-center p-4';
     modal.innerHTML = `
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="app.closeModal()"></div>
-      <div class="relative bg-white rounded-xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-hidden flex flex-col fade-in">
-        <div class="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
-          <h3 class="text-base font-bold text-slate-800">${utils.escapeHtml(title)}</h3>
-          <button onclick="app.closeModal()" class="text-slate-400 hover:text-slate-600"><i class="fas fa-times"></i></button>
+      <div class="relative bg-[#141414] rounded-xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-hidden flex flex-col fade-in">
+        <div class="px-5 py-4 border-b border-[#2a2a2a] flex items-center justify-between">
+          <h3 class="text-base font-bold text-white">${utils.escapeHtml(title)}</h3>
+          <button onclick="app.closeModal()" class="text-gray-500 hover:text-gray-400"><i class="fas fa-times"></i></button>
         </div>
         <div id="modal-body" class="px-5 py-4 overflow-y-auto flex-1">${bodyHTML}</div>
-        <div class="px-5 py-3 border-t border-slate-200 bg-slate-50 flex justify-end gap-2">
-          <button onclick="app.closeModal()" class="px-4 py-2 text-sm text-slate-600 hover:bg-slate-200 rounded-lg transition">Cancelar</button>
-          <button id="modal-confirm" class="px-4 py-2 text-sm bg-blue-900 text-white hover:bg-blue-800 rounded-lg transition font-medium">Salvar</button>
+        <div class="px-5 py-3 border-t border-[#2a2a2a] bg-[#0a0a0a] flex justify-end gap-2">
+          <button onclick="app.closeModal()" class="px-4 py-2 text-sm text-gray-400 hover:bg-[#2a2a2a] rounded-lg transition">Cancelar</button>
+          <button id="modal-confirm" class="px-4 py-2 text-sm bg-amber-600 text-black hover:bg-amber-500 rounded-lg transition font-medium">Salvar</button>
         </div>
       </div>
     `;
@@ -1024,8 +1023,8 @@ const app = {
     const colors = {
       success: 'bg-green-600',
       error: 'bg-red-600',
-      warning: 'bg-amber-500',
-      info: 'bg-slate-700'
+      warning: 'bg-amber-600',
+      info: 'bg-[#1a1a1a]'
     };
     const icons = {
       success: 'fa-check-circle',
